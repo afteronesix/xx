@@ -1,0 +1,111 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  background: url('./assets/img/main_bg_black.png') no-repeat center/cover;
+}
+
+/* btn in BEM */
+.btn {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
+  letter-spacing: 0.3rem;
+  font-size: 25px;
+  line-height: 120%;
+  text-transform: uppercase;
+  background-color: #d6441b;
+  color: #fff;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.btn:hover {
+  background-color: #f35c33;
+}
+
+/* select arrow in battle */
+.arrow-down {
+  display: none;
+  position: absolute;
+  top: -75px;
+  /* left: 30%; */
+  left: 50%;
+  transform: translateX(-30px);
+  margin: 30px;
+}
+
+.arrow-down span {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-bottom: 5px solid grey;
+  border-right: 5px solid grey;
+  transform: rotate(45deg);
+  margin: -16px;
+  animation: arrow-down 2s infinite;
+
+}
+
+.arrow-down span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.arrow-down span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+.player__content-taken-damage {
+  animation: damage-up forwards 2s;
+}
+
+@keyframes arrow-down {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+@keyframes damage-up {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+}
+
+/* stylesh scrollbar */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
