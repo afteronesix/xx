@@ -1,0 +1,35 @@
+@import "../../variables.scss";
+
+.Main-scene {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: $backdropFilter;
+
+    &__modal {
+        max-width: 1440px;
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: $bacgroundColorGradient;
+        border-radius: $borderRadius;
+        padding: 0 60px;
+    }
+
+    &__list {
+        list-style-type: none;
+        padding: 0;
+
+        .item__list {
+            position: relative;
+            margin-bottom: 50px;
+
+            &-button {
+                width: 205px;
+            }
+        }
+    }
+}
